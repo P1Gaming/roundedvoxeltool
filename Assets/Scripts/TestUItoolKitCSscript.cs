@@ -21,6 +21,10 @@ public class TestUItoolKitCSscript : MonoBehaviour, IPointerDownHandler
         var element = mainwindow.rootVisualElement;
         var changeValueButton = mainwindow.rootVisualElement.Q<Button>("ChangeValueButton");
         var undoButton = mainwindow.rootVisualElement.Q<Button>("UndoButton");
+        var redoButton = mainwindow.rootVisualElement.Q<Button>("RedoButton");
+
+        redoButton.clicked += HandleRedoButtonClicked;
+
 
         lable = mainwindow.rootVisualElement.Q<Label>("ValueVisual");
         valueHolder.myValueChanged += handleChangedValue;
@@ -30,6 +34,11 @@ public class TestUItoolKitCSscript : MonoBehaviour, IPointerDownHandler
         visual.AddManipulator(new DragManipulator());
         visual.RegisterCallback<DropEvent>(evt =>
           Debug.Log($"{evt.target} dropped on {evt.droppable}"));
+    }
+
+    private void HandleRedoButtonClicked()
+    {
+        commandHistory.Redo();
     }
 
     private void handleChangedValue()

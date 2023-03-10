@@ -1,9 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/droppable.uss?fileID=7433441132597879392&amp;guid=e8f0d23af4fbb194f83fc50461c308c9&amp;type=3#droppable" />
+    <Style src="project://database/Assets/Buttons.uss?fileID=7433441132597879392&amp;guid=f29b2d6fbdd63424daa243a4b64cc914&amp;type=3#Buttons" />
     <ui:VisualElement class="droppable" style="-unity-background-image-tint-color: rgba(255, 255, 255, 0); height: 1076px;">
         <ui:VisualElement name="window" style="height: 368px; width: 40%; background-color: rgb(0, 0, 0); left: 99px; top: 78px; right: auto; bottom: auto;">
-            <ui:Button text="Undo" display-tooltip-when-elided="true" name="UndoButton" style="height: 109px;" />
-            <ui:Button text="Change Value" display-tooltip-when-elided="false" name="ChangeValueButton" tooltip="Change the value of the textfield" style="height: 108px; -unity-text-align: middle-center;" />
+            <ui:Button display-tooltip-when-elided="true" text="Redo" name="RedoButton" class="Button" style="height: 56px;" />
+            <ui:Button text="Undo" display-tooltip-when-elided="true" name="UndoButton" class="Button" style="height: 109px;" />
+            <ui:Button text="Change Value" display-tooltip-when-elided="false" name="ChangeValueButton" tooltip="Change the value of the textfield" class="Button" style="height: 108px; -unity-text-align: middle-center;" />
             <ui:Label text="0" display-tooltip-when-elided="true" name="ValueVisual" style="height: 84px; font-size: 74px;" />
         </ui:VisualElement>
     </ui:VisualElement>
